@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 
+
 def index(request):
     template = 'blog/index.html'
     context = {'index': posts[::-1]}
@@ -22,6 +23,7 @@ def category_posts(request, category_slug):
     template = 'blog/category.html'
     context = {'category_slug': category_slug}
     return render(request, template, context)
+
 
 posts = [
     {
